@@ -1,0 +1,55 @@
+﻿<!--   
+    author: Xiaowen Li
+    Master page provides overall background for the web forms 
+    -->
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="All.master.cs" Inherits="AutoSalesAndServices.All" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Styles/Styles.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div id="Wrapper">
+            <header>
+                &nbsp;<img src="https://t4.ftcdn.net/jpg/00/77/32/87/240_F_77328753_SEzOIpZECI8LOLXi2F7YPmqq9aaQul5C.jpg" alt="Logo Image" title="Logo Image" />
+                <h1 class="title">Auto Sales and Services</h1>
+                <div id="list">
+                    <asp:HyperLink ID="hlCars" runat="server" NavigateUrl="~/Cars.aspx">Cars</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="hlSalesInvoices" runat="server" NavigateUrl="~/SalesInvoices.aspx">Sales Invoices</asp:HyperLink>
+                    &nbsp; &nbsp;&nbsp;
+                    <asp:HyperLink ID="hlServiceInvoices" runat="server">Service Invoices</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="hlCustomers" runat="server">Customers</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="hlEmployees" runat="server">Employees</asp:HyperLink>
+                </div>
+            </header>
+
+            <aside>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderSidebar" runat="server">
+                    <p>&nbsp;</p>
+                </asp:ContentPlaceHolder>
+            </aside>
+
+            <section id="ContentArea">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                    <p>&nbsp;</p>
+                </asp:ContentPlaceHolder>
+            </section>
+
+            <footer>
+                <div id="cR">Copyright Info</div>
+            </footer>
+        </div>
+
+
+    </form>
+</body>
+</html>
